@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+       <Agate_Payments>
+          <version>0.1.0</version>
+       </Agate_Payments>
+    </modules>
+
+     <frontend>
+        <routers>
+            <agate>
+                <use>standard</use>
+                <args>
+                    <module>Agate_Payments</module>
+                    <frontName>agate</frontName>
+                </args>
+            </agate>
+        </routers>
+        <layout>
+            <updates>
+                <agate>
+                    <file>agate.xml</file>
+                </agate>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+		<blocks>
+			<agate>
+				<class>Agate_Payments_Block</class>
+			</agate>
+		</blocks>
+		<helpers>
+			<agate>
+				<class>Agate_Payments_Helper</class>
+			</agate>
+		</helpers>
+
+		<models>
+			<agate>
+				<class>Agate_Payments_Model</class>
+			</agate>
+		</models>
+
+		<resources>
+			<agate_setup>
+				<setup>
+					<module>Agate_Payments</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</agate_setup>
+			<agate_write>
+				<connection>
+				  <use>core_write</use>
+				</connection>
+			</agate_write>
+			<agate_read>
+			   <connection>
+				<use>core_read</use>
+			  </connection>
+			</agate_read>
+		</resources>
+    </global>
+
+    <default>
+        <payment>
+            <agate>
+                <active>0</active>
+				<model>agate/PaymentMethod</model>
+                <title>Agate</title>
+				<payment_action>authorize</payment_action>
+                <debug>1</debug>
+
+				<callbackuri>agate/callback</callbackuri>
+
+				<apikey></apikey>
+
+				<order_status>pending</order_status>
+				<invoice_created>pending</invoice_created>
+				<invoice_paid>processing</invoice_paid>
+				<invoice_completed>complete</invoice_completed>
+				<invoice_expired>canceled</invoice_expired>
+				<invoice_cancelled>canceled</invoice_cancelled>
+            </agate>
+         </payment>
+    </default>
+</config>

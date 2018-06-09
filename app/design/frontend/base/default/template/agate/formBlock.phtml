@@ -1,0 +1,14 @@
+<?php
+$params = Mage::getSingleton('checkout/session')->getSessionVariable();
+Mage::getSingleton('checkout/session')->setSessionVariable();
+?>
+<form name="agateform" method="post" action="<?php echo $params["baseUri"] . "?api_key=" . $params["api_key"]; ?>">
+  <input type='hidden' autocomplete='off' name='amount' value='<?php echo $params["amount"]; ?>'/>".
+  <input type='hidden' autocomplete='off' name='amount_iUSD' value='<?php echo $params["amount_iUSD"]; ?>' />
+  <input type='hidden' autocomplete='off' name='callBackUrl' value='<?php echo $params["redirect_url"]; ?>'/>
+  <input type='hidden' autocomplete='off' name='api_key' value='<?php echo $params["api_key"]; ?>'/>
+  <input type='hidden' autocomplete='off' name='cur' value='<?php echo $params["currencySymbol"]; ?>'/>
+</form>
+<script type="text/javascript">
+document.agateform.submit();
+</script>
