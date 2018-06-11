@@ -30,3 +30,9 @@ Enter your API KEY you accquired from Agate and save the settings.
 Once enabled, your customers will be given the option to pay with Agate. Once they checkout they are redirected to a full screen Agate invoice to pay for the order.
 
 As a merchant, the orders in your Magento store can be treated as any other order. You may need to adjust the Invoice Settings depending on your order fulfillment.
+
+Try How It Works ?
+====================
+
+We have created a demo website for you to test the plugin, feel free to visit [here](http://agate.services/magento19/) .
+
