@@ -58,7 +58,7 @@ class Agate_Payments_Model_PaymentMethod extends Mage_Payment_Model_Method_Abstr
 
     return $this;
 
-	}
+	 }
 
   public function getOrderPlaceRedirectUrl()
     {
