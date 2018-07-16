@@ -8,6 +8,7 @@ Mage::getSingleton('checkout/session')->setSessionVariable();
   <input type='hidden' autocomplete='off' name='callBackUrl' value='<?php echo $params["redirect_url"]; ?>'/>
   <input type='hidden' autocomplete='off' name='api_key' value='<?php echo $params["api_key"]; ?>'/>
   <input type='hidden' autocomplete='off' name='cur' value='<?php echo $params["currencySymbol"]; ?>'/>
+
 </form>
 <script type="text/javascript">
 document.agateform.submit();
