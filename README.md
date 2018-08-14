@@ -34,5 +34,5 @@ As a merchant, the orders in your Magento store can be treated as any other orde
 Try How It Works ?
 ====================
 
-We have created a demo website for you to test the plugin, feel free to visit [here](http://agate.services/magento19/) .
+We have created a demo website for you to test the plugin, feel free to visit [here](http://agate.services/magento19/) and feel the live experience.
 
